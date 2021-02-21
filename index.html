@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="widtht= device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Survey Form 2.0</title>
+	</head>
+	<body>
+		<header>
+			<h1 id="title">RPG role survey form</h1>
+			<p id="description">Tell us more about your role on this quest, adventurer.</p>
+		</header>
+
+		<!-- At this point, I felt like the project is completely functional. I knew that I could come back at anytime and improve it even further on it's CSS, but I felt that it should be more important for me to move on and go to the next challenge.
+		
+		I tried some things with the CSS variables, Color Picks, even adding a new Chrome Extension for it, and some other things that can be looked up on the CSS file. -->
+
+		<main>
+			<form id="survey-form" action="" method="get">
+				<div id="personal-data">
+					<label for="name" id="name-label">
+						Name
+						<input type="text" name="name" id="name" placeholder="Enter your name, adventurer." required />
+					</label>
+
+					<label for="email" id="email-label">
+						Email
+						<input type="email" name="email" id="email" placeholder="Enter your email adress, adventurer." required />
+					</label>
+
+					<label for="number" id="number-label">
+						Age
+						<input type="number" name="age" min="6" max="800" id="number" placeholder="Enter your age, adventurer." required />
+					</label>
+				</div>
+
+				<div id="hero-selection">
+					<label for="dropdown">What's your favorite hero for this quest?</label>
+
+					<select name="role" id="dropdown" required>
+						<option value="" selected disabled>Select your hero</option>
+
+						<optgroup label="Macus Kruber">
+							<option value="Merc">Mercenary</option>
+							<option value="Hunter">Hunter</option>
+							<option value="FKnight">Foot Knight</option>
+							<option value="GKnight">Grail Knight</option>
+						</optgroup>
+
+						<optgroup label="Bardin Goreksson">
+							<option value="RVeteran">Ranger Veteran</option>
+							<option value="IBreaker">Ironbreaker</option>
+							<option value="Slayer">Slayer</option>
+						</optgroup>
+
+						<optgroup label="Kerillian">
+							<option value="WStalker">Waystalker</option>
+							<option value="HMaiden">Handmaiden</option>
+							<option value="Shade">Shade</option>
+						</optgroup>
+
+						<optgroup label="Victor Saltspyre">
+							<option value="WHCaptain">Wich Hunter Captain</option>
+							<option value="BHunter">Bounty Hunter</option>
+							<option value="Zealot">Zealot</option>
+						</optgroup>
+
+						<optgroup label="Sienna Fuegonasus">
+							<option value="BWizard">Battle Wizard</option>
+							<option value="Pyro">Pyromancer</option>
+							<option value="Unchained">Unchained</option>
+						</optgroup>
+					</select>
+				</div>
+
+				<!-- Trying 'required' on the <fieldset> -->
+
+				<fieldset id="role-selection" aria-required="true">
+					<legend>What role defines you better?</legend>
+
+					<label for="DPS"><input type="radio" name="role" id="DPS" value="DPS" /> Damage Dealer</label>
+
+					<label for="Sup"><input type="radio" name="role" id="Sup" value="Sup" />Support</label>
+
+					<label for="Tank"><input type="radio" name="role" id="Tank" value="Tank" />Tank</label>
+				</fieldset>
+
+				<fieldset id="hero-party" aria-required="true">
+					<legend>Wich heroes would you like to have at your side?</legend>
+
+					<label for="Kruber"><input type="checkbox" value="Kruber" id="Kruber" />Kruber</label>
+
+					<label for="Bardin"><input type="checkbox" value="Bardin" id="Bardin" />Bardin</label>
+
+					<label for="Kerillian"><input type="checkbox" value="Kerillian" id="Kerillian" />Kerillian</label>
+
+					<label for="Victor"><input type="checkbox" value="Victor" id="Victor" />Victor</label>
+
+					<label for="Sienna"><input type="checkbox" value="Sienna" id="Sienna" />Sienna</label>
+				</fieldset>
+
+				<div id="text-field">
+					<label for="comments">Tell us more about the role you've chosen and how do you feel about it.</label>
+
+					<textarea name="comments" id="comments" cols="30" rows="10" placeholder="How passinate are you about your role? Tell us here..."></textarea>
+				</div>
+
+				<button type="submit" id="submit">Submit</button>
+			</form>
+		</main>
+
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	</body>
+</html>
